@@ -96,19 +96,6 @@ export default class PlayerMenu extends Component {
               </a>
             </div>
           )}
-          <Divider />
-          <MenuItem
-            onClick={() => {
-              navigator.clipboard.writeText(
-                `${server}/api/v1/redirectdownload/${encodeURIComponent(
-                  metadata.name
-                )}?a=${auth}&id=${id}`
-              );
-              this.handleClose();
-            }}
-          >
-            Copy URL
-          </MenuItem>
         </Menu>
       </div>
     );
