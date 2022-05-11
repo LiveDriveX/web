@@ -447,6 +447,14 @@ export class TVSView extends Component {
       }
     }
 
+    function getFilename(str) {
+      var tmpStr  = str.match("S(.*)E(.*)");
+      var newStr = tmpStr[0].split(" ")[0].replace("S","Season ").replace("E"," Episode ");
+      tmpStr  = str.match(" (.*)p");
+      newStr += " ["+tmpStr[0].split(" ").at(-1)+"]";
+      return newStr;
+    }
+
     return (
       <div className="TVSView">
         <Dialog
@@ -475,12 +483,6 @@ export class TVSView extends Component {
               subtitle: tracks[default_track],
               preload: "auto",
               theme: theme.palette.primary.main,
-              contextmenu: [
-                {
-                  text: "libDrive",
-                  link: "https://github.com/libDrive/libDrive",
-                },
-              ],
               screenshot: false,
               volume: 1,
               lang: "en",
@@ -492,16 +494,6 @@ export class TVSView extends Component {
                 ? metadata.children.map((child, n) => (
                     <li className={isHash(n, q)} key={n}>
                       <div>
-                        <img
-                          onClick={() =>
-                            this.handleClickImage(
-                              `${server}/api/v1/image/thumbnail?id=${child.id}`
-                            )
-                          }
-                          onError={(e) => (e.target.style = "display: none;")}
-                          src={`${server}/api/v1/image/thumbnail?id=${child.id}`}
-                          className="plyr-miniposter"
-                        />
                         <Link
                           to={{
                             pathname: window.location.pathname,
@@ -510,7 +502,7 @@ export class TVSView extends Component {
                           className="plyr-miniposter-link"
                           key={guid()}
                         >
-                          <div>{child.name}</div>
+                          <div>{getFilename(child.name)}</div>
                         </Link>
                       </div>
                     </li>
