@@ -484,7 +484,6 @@ export class TVSView extends Component {
               preload: "auto",
               theme: theme.palette.primary.main,
               screenshot: false,
-              volume: 1,
               lang: "en",
             }}
           />
