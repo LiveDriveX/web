@@ -253,13 +253,7 @@ export default class MovieView extends Component {
               subtitle: tracks[default_track],
               preload: "auto",
               theme: theme.palette.primary.main,
-              contextmenu: [
-                {
-                  text: "libDrive",
-                  link: "https://github.com/libDrive/libDrive",
-                },
-              ],
-              screenshot: true,
+              screenshot: false,
               volume: 1,
               lang: "en",
             }}
