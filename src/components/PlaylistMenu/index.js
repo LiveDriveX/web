@@ -49,16 +49,7 @@ export default class PlaylistMenu extends Component {
       </div>
     );*/
     return (
-      <div className="info__button">
-        <Button
-          variant="outlined"
-          color="primary"
-          style={{ width: "135px" }}
-          startIcon={<PetsIcon />}
-        >
-          ToonsHub
-        </Button>
-      </div>
+      <div></div>
     );
   }
 }
