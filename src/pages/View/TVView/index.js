@@ -450,7 +450,7 @@ export class TVSView extends Component {
     function getFilename(str) {
       var tmpStr  = str.match("S([0-9]+)E(.*)");
       var newStr = tmpStr[0].split(" ")[0].replace("S","Season ").replace("E"," Episode ");
-      tmpStr  = str.match(" (.*)p")[0];
+      tmpStr  = str.match("([0-9]+)p")[0];
       tmpStr = tmpStr.replace("[", "");
       newStr += " ["+tmpStr.split(" ").at(-1)+"]";
       return newStr;
