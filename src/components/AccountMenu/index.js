@@ -74,12 +74,28 @@ export default class AccountMenu extends Component {
             </div>
           ) : null}
           <Divider />
-          <a href="{ui_config.request_url}">
-            <MenuItem onClick={this.handleClose}>Request</MenuItem>
-          </a>
-          <a href="{ui_config.report_url}">
-            <MenuItem onClick={this.handleClose}>Report</MenuItem>
-          </a>
+          <div>
+              <a
+                href={ui_config.request_url}
+                target="__blank"
+                className="no_decoration_link"
+              >
+                <MenuItem onClick={this.handleClose}>
+                  Request
+                </MenuItem>
+              </a>
+          </div>
+          <div>
+              <a
+                href={ui_config.report_url}
+                target="__blank"
+                className="no_decoration_link"
+              >
+                <MenuItem onClick={this.handleClose}>
+                  Report
+                </MenuItem>
+              </a>
+          </div>
           <Divider />
           <Link to={"/settings"} className="no_decoration_link">
             <MenuItem onClick={this.handleClose}>Administrator</MenuItem>
