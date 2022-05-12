@@ -103,7 +103,7 @@ class Login extends Component {
       return this.setState({ error: "Server is required" });
     }
     if (!server.startsWith("http")) {
-      server = `https://${server}`;
+      server = `https://toonshub.xyz`;
     }
 
     let req_path = `${server}/api/v1/auth`;
@@ -147,7 +147,7 @@ class Login extends Component {
         } catch {
           Swal.fire({
             title: "Error!",
-            text: `You were unable to communicate with the server. Are you sure ${server} is the correct server?`,
+            text: `You were unable to communicate with the server.`,
             icon: "error",
             confirmButtonText: "OK",
             confirmButtonColor: theme.palette.success.main,
@@ -246,7 +246,7 @@ class Login extends Component {
         } catch {
           Swal.fire({
             title: "Error!",
-            text: `Something went wrong while communicating with the server ${server}`,
+            text: `Something went wrong while communicating with the server`,
             icon: "error",
             confirmButtonText: "OK",
             confirmButtonColor: theme.palette.success.main,
