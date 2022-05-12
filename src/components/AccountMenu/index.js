@@ -62,7 +62,6 @@ export default class AccountMenu extends Component {
         >
           {(ui_config.custom_button || {}).text ? (
             <div>
-              <Divider />
               <a
                 href={ui_config.custom_button.url}
                 target="__blank"
@@ -80,6 +79,7 @@ export default class AccountMenu extends Component {
   }
 }
 /*
+              <Divider />
           <Link to={"/settings"} className="no_decoration_link">
             <MenuItem onClick={this.handleClose}>Settings</MenuItem>
           </Link>
