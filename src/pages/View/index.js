@@ -108,7 +108,7 @@ export default class View extends Component {
         } else {
           Swal.fire({
             title: "Error!",
-            text: `Something went wrong while communicating with the server! Is '${server}' the correct address?`,
+            text: `Something went wrong while communicating with the server!`,
             icon: "error",
             confirmButtonText: "Logout",
             confirmButtonColor: theme.palette.success.main,
@@ -129,7 +129,7 @@ export default class View extends Component {
         } else {
           Swal.fire({
             title: "Error!",
-            text: `libDrive could not communicate with the server! Is '${server}' the correct address?`,
+            text: `We could not communicate with the server!`,
             icon: "error",
             confirmButtonText: "Logout",
             confirmButtonColor: theme.palette.success.main,
@@ -179,7 +179,7 @@ export default class View extends Component {
           } else {
             Swal.fire({
               title: "Error!",
-              text: `Something went wrong while communicating with the server! Is '${server}' the correct address?`,
+              text: `Something went wrong while communicating with the server!`,
               icon: "error",
               confirmButtonText: "Logout",
               confirmButtonColor: theme.palette.success.main,
@@ -200,7 +200,7 @@ export default class View extends Component {
           } else {
             Swal.fire({
               title: "Error!",
-              text: `libDrive could not communicate with the server! Is '${server}' the correct address?`,
+              text: `We could not communicate with the server!`,
               icon: "error",
               confirmButtonText: "Logout",
               confirmButtonColor: theme.palette.success.main,
@@ -247,7 +247,7 @@ export default class View extends Component {
             } else {
               Swal.fire({
                 title: "Error!",
-                text: `Something went wrong while communicating with the server! Is '${server}' the correct address?`,
+                text: `Something went wrong while communicating with the server!`,
                 icon: "error",
                 confirmButtonText: "Logout",
                 confirmButtonColor: theme.palette.success.main,
@@ -268,7 +268,7 @@ export default class View extends Component {
             } else {
               Swal.fire({
                 title: "Error!",
-                text: `libDrive could not communicate with the server! Is '${server}' the correct address?`,
+                text: `We could not communicate with the server!`,
                 icon: "error",
                 confirmButtonText: "Logout",
                 confirmButtonColor: theme.palette.success.main,
