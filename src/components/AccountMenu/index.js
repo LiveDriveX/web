@@ -77,11 +77,12 @@ export default class AccountMenu extends Component {
           <Link to={"/settings"} className="no_decoration_link">
             <MenuItem onClick={this.handleClose}>Settings</MenuItem>
           </Link>
-          <Link to={"/logout"} className="no_decoration_link">
-            <MenuItem onClick={this.handleClose}>Logout</MenuItem>
-          </Link>
         </Menu>
       </div>
     );
   }
 }
+/*
+          <Link to={"/logout"} className="no_decoration_link">
+            <MenuItem onClick={this.handleClose}>Logout</MenuItem>
+          </Link>*/
