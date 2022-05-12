@@ -73,6 +73,14 @@ export default class AccountMenu extends Component {
               </a>
             </div>
           ) : null}
+          <Divider />
+          <a href="{ui_config.request_url}">
+            <MenuItem onClick={this.handleClose}>Request</MenuItem>
+          </a>
+          <a href="{ui_config.report_url}">
+            <MenuItem onClick={this.handleClose}>Report</MenuItem>
+          </a>
+          <Divider />
           <Link to={"/settings"} className="no_decoration_link">
             <MenuItem onClick={this.handleClose}>Administrator</MenuItem>
           </Link>
@@ -82,7 +90,6 @@ export default class AccountMenu extends Component {
   }
 }
 /*
-              <Divider />
           <Link to={"/logout"} className="no_decoration_link">
             <MenuItem onClick={this.handleClose}>Logout</MenuItem>
           </Link>*/
