@@ -105,7 +105,7 @@ export default class PlayerMenu extends Component {
                 href={`https://thappplayer.blogspot.com/?m=1&url=${encodeURIComponent(playerURL)}`}
                 className="no_decoration_link"
               >
-                <MenuItem onClick={this.handleClose}>JW Player</MenuItem>
+                <MenuItem onClick={this.handleClose}>FS Player</MenuItem>
              </a>
            </div>
         </Menu>
