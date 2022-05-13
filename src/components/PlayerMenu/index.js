@@ -30,6 +30,9 @@ export default class PlayerMenu extends Component {
     let { auth, id, isAndroid, isIOS, metadata, server } = this.state;
 
     let mobileUrl;
+    const playerURL = (`${server}/api/v1/redirectdownload/${encodeURIComponent(
+        metadata.name
+      )}?a=${auth}&id=${id}`);
     const streamURL = new URL(
       `${server}/api/v1/redirectdownload/${encodeURIComponent(
         metadata.name
@@ -99,7 +102,7 @@ export default class PlayerMenu extends Component {
            
            <div>
              <a
-                href={`https://thappplayer.blogspot.com/?m=1&url=${encodeURIComponent(streamURL)}`}
+                href={`https://thappplayer.blogspot.com/?m=1&url=${encodeURIComponent(playerURL)}`}
                 className="no_decoration_link"
               >
                 <MenuItem onClick={this.handleClose}>JW Player</MenuItem>
